@@ -52,13 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Function to load tasks from Local Storage
-    function loadTask() {
+    function loadTasks() {
         const storedTasks = JSON.parse(localStorage.getItem('tasks') || '[]');
         storedTasks.forEach(taskText => addTask(taskText, false)); // Don't save when loading
     }
 
     // Load tasks on page load
-    loadTask();
+    loadTasks();
 
     // Add event listener to the Add Task button
     addButton.addEventListener('click', () => addTask());
